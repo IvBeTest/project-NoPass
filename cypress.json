@@ -1,7 +1,14 @@
 {
-        
+		"viewportWidth": 1280,
+  		"viewportHeight": 720,
+        "baseUrl": "https://nopass.us/#",
+        "projectId": "wpek47",
         "chromeWebSecurity": false,
-        "experimentalSessionAndOrigin": true
+ 
+        "env": {
+                "MAILOSAUR_API_KEY": "TGWLum3bg9mYsedE"
+                
+              }
     
 }
 
