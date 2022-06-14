@@ -93,6 +93,29 @@ describe('Проверка наличия плейсхолдеров, подск
             cy.get(DATA_LOCATORS.numberOfUsers3).invoke('text').should('eq', ' 501-1,000 ')
             cy.get(DATA_LOCATORS.numberOfUsers4).invoke('text').should('eq', ' 1,001-10,000 ')
             cy.get(DATA_LOCATORS.numberOfUsers5).invoke('text').should('eq', ' >10,000 ')
+            cy.get('.cdk-overlay-backdrop').click()
     
+        })
+
+        it('Проверка наличия сообщения и соответствия текста об успешной отправке формы', () => {    
+
+            cy.get(DATA_LOCATORS.firstName).clear()
+            cy.get(DATA_LOCATORS.lastName).clear()
+            cy.get(DATA_LOCATORS.corporateName).clear()
+            cy.get(DATA_LOCATORS.workEmail).clear()
+
+            cy.get(DATA_LOCATORS.firstName).type(testData.valid.first_name)
+            cy.get(DATA_LOCATORS.lastName).type(testData.valid.last_name)
+            cy.get(DATA_LOCATORS.corporateName).type(testData.valid.corporate_name)
+            cy.get(DATA_LOCATORS.numberOfUsers).click()
+            cy.get(DATA_LOCATORS.numberOfUsers0).click()
+            cy.get(DATA_LOCATORS.workEmail).type(testData.valid.work_email)
+            cy.get(DATA_LOCATORS.phoneNumber).type(testData.valid.phone_number)
+            cy.get(DATA_LOCATORS.comments).type(testData.valid.comments)
+
+            cy.get(DATA_LOCATORS.buttonSubmit).click() 
+            cy.get(DATA_LOCATORS.successfulSubmissionMessage).contains("Thank you for contacting us, we'll get back to you as soon as possible")
+                cy.log('Проверка сообщения об успешной отправке.')      
+                       
         })
 })
