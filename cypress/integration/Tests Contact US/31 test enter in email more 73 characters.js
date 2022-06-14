@@ -1,4 +1,4 @@
-import {testData} from './testData';
+import {testData} from '../../fixtures/testData';
 
 describe('31 test enter in email more 73 characters', () => {
     before(() => {

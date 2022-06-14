@@ -1,4 +1,4 @@
-import {testData} from './testData';
+import {testData} from '../../fixtures/testData';
 
 describe('20 test not valid, empty last name', () => {
     before(() => {

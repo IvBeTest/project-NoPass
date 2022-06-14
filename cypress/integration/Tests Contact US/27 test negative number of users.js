@@ -1,4 +1,4 @@
-import {testData} from './testData';
+import {testData} from '../../fixtures/testData';
 
 describe('27 test negative number of users', () => {
     before(() => {

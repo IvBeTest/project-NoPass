@@ -1,4 +1,4 @@
-import {testData} from './testData';
+import {testData} from '../../fixtures/testData';
 
 describe('22 test not valid, empty number of users', () => {
     before(() => {

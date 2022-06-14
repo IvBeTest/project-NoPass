@@ -1,4 +1,4 @@
-import {testData} from './testData';
+import {testData} from '../../fixtures/testData';
 
 describe('30 test enter in email more 72 characters', () => {
     before(() => {
@@ -12,15 +12,17 @@ describe('30 test enter in email more 72 characters', () => {
         cy.get('#mat-input-1').type(testData.validTestData.last_name)
         cy.get('#mat-input-2').type(testData.validTestData.corporate_name)
         cy.get('#mat-input-3').type(testData.validTestData.number_of_users)
-        cy.get('#mat-input-4').type(testData.validTestData.email_not_validation_worked_on_72_characters)
+        cy.get('#mat-input-4').type(testData.notValidTestData.email_not_validation_worked_on_72_characters)
                 cy.log("Поле 'Email' принимает больше max доустимого значения. 72 символа")
         cy.get('#mat-input-5').type(testData.validTestData.phone_number)
         cy.get('#mat-input-6').type(testData.validTestData.comments)
+        cy.get('.outline-form > .mat-focus-indicator').should('not.have.attr', 'disabled')
+                cy.log("Проверка, что кнопка 'Submit' активна")
 
 
-        cy.get('.outline-form > .mat-focus-indicator')
-                //.click()
-                cy.log("Кнопка 'Submit' активна")
+        // cy.get('.outline-form > .mat-focus-indicator')
+        //         //.click()
+        //         cy.log("Кнопка 'Submit' активна")
 
 
     })

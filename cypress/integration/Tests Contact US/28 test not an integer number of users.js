@@ -1,4 +1,4 @@
-import {testData} from './testData';
+import {testData} from '../../fixtures/testData';
 
 describe('28 test not an integer number of users', () => {
     before(() => {
@@ -15,7 +15,7 @@ describe('28 test not an integer number of users', () => {
                 cy.log("Поле Number of users принимает не целочесленное число.")
         cy.get('#mat-input-4').type(testData.validTestData.work_email)
         cy.get('#mat-input-5').type(testData.validTestData.phone_number)
-        cy.get('#mat-input-6').type(perem.testData.testData.validTestData.comments)
+        cy.get('#mat-input-6').type(testData.validTestData.comments)
 
 
         cy.get('.outline-form > .mat-focus-indicator')

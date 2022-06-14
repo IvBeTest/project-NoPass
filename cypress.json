@@ -1,14 +1,13 @@
 {
 		"viewportWidth": 1280,
   		"viewportHeight": 720,
-        "baseUrl": "https://nopass.us/#",
-        "projectId": "wpek47",
+        "baseUrl": "https://saas-userprofile.identite.us/#/",
         "chromeWebSecurity": false,
- 
+        "projectId": "wpek47",
         "env": {
                 "MAILOSAUR_API_KEY": "TGWLum3bg9mYsedE"
-                
               }
+        
     
 }
 
